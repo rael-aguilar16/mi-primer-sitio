@@ -1,3 +1,75 @@
+/* --- ESTILOS DEL MENÚ DE NAVEGACIÓN --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding-top: 70px; /* Espacio para que el menú fijo no tape la tarjeta */
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que el menú quede por encima de todo */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Espacio entre cada opción del menú */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Color al pasar el cursor */
+}
+
+/* Centrado del contenido principal */
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+}
+
+/* --- ESTILOS PARA MODO OSCURO EN EL MENÚ --- */
+body.oscuro .navbar {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.oscuro .nav-links a {
+    color: #ffffff;
+}
+
+body.oscuro .nav-links a:hover {
+    color: #007bff;
+}
+
 /* Configuración básica de la página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -79,4 +151,140 @@ body.oscuro {
 .tarjeta.modo-oscuro h1,
 .tarjeta.modo-oscuro .bio {
     color: #ffffff;
+}
+
+/* --- ESTILOS DEL FORMULARIO DE CONTACTO --- */
+
+.tarjeta-formulario {
+    max-width: 450px; /* Un poco más ancho para que quepa bien el formulario */
+    text-align: left; /* Alineamos las etiquetas del formulario a la izquierda */
+}
+
+.tarjeta-formulario h1, 
+.tarjeta-formulario .bio {
+    text-align: center; /* Mantenemos título y descripción centrados */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre cada campo */
+    margin-top: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.campo input, 
+.campo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto al hacer clic en un campo de texto */
+.campo input:focus, 
+.campo textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn-enviar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes adicionales si se activa el Modo Oscuro */
+body.oscuro .campo label {
+    color: #ddd;
+}
+
+body.oscuro .campo input, 
+body.oscuro .campo textarea {
+    background-color: #2b2b2b;
+    border-color: #444;
+    color: #fff;
+}
+
+/* --- ESTILOS DE BOTONES SOCIALES --- */
+
+.separador {
+    text-align: center;
+    margin: 25px 0 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 0.1em;
+}
+
+.separador span {
+    background: #fff;
+    padding: 0 10px;
+    color: #888;
+    font-size: 13px;
+}
+
+body.oscuro .separador span {
+    background: #1e1e1e;
+    color: #aaa;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-red:hover {
+    transform: translateY(-2px); /* Eleva un poco el botón al pasar el cursor */
+    opacity: 0.9;
+}
+
+/* Colores oficiales de las marcas */
+.facebook {
+    background-color: #1877f2;
+}
+
+.whatsapp {
+    background-color: #25d366;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Librería de íconos de Font Awesome para mostrar los logos de Facebook y WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header class="navbar">
+        <div class="logo">MiPortafolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="tarjeta tarjeta-formulario">
+            <h1>¡Contáctame!</h1>
+            <p class="bio">Envíame un mensaje o escríbeme directamente por mis redes sociales.</p>
+            
+            <!-- Formulario de Contacto -->
+            <form action="#" method="POST" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Rael Aguilar" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+
+            <!-- Separador visual -->
+            <div class="separador">
+                <span>O encuéntrame en:</span>
+            </div>
+
+            <!-- Botones de Redes Sociales -->
+            <div class="redes-sociales">
+                <!-- Enlace a Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100081356799858&locale=es_LA" target="_blank" class="btn-red facebook">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </a>
+
+                <!-- API Enlace directo de WhatsApp (Reemplaza 521234567890 por tu número con código de país) -->
+                <a href="https://api.whatsapp.com/send?phone=529171283472&text=Hola%20Rael,%20vi%20tu%20sitio%20web" target="_blank" class="btn-red whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
