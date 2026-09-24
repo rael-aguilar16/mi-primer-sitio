@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Proyectos</title>
     <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Librería de íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Mantenemos el mismo menú en todas las páginas -->
+    <!-- Menú de Navegación -->
     <header class="navbar">
         <div class="logo">MiPortafolio</div>
         <nav>
@@ -21,14 +24,22 @@
     </header>
 
     <main class="contenedor-principal">
-        <div class="tarjeta">
-            <h1>Mis Proyectos</h1>
-            <p class="bio">Aquí irán los proyectos que vaya construyendo a lo largo de mi aprendizaje.</p>
+        <div class="tarjeta tarjeta-proyecto">
+            <div class="icono-app">
+                <i class="fa-brands fa-android"></i>
+            </div>
             
-            <ul style="text-align: left; padding-left: 20px; color: #555;">
-                <li><strong>Tarjeta Interactiva:</strong> Mi primer sitio en HTML, CSS y JS alojado en GitHub Pages.</li>
-                <li><strong>Próximamente:</strong> Sistema con conexión a base de datos PHP/MySQL.</li>
-            </ul>
+            <h1>Mi Aplicación de Android</h1>
+            <p class="profesion">Desarrollada en Android Studio</p>
+
+            <p class="bio">
+                Esta es mi aplicación móvil creada en Android Studio. Puedes descargar el instalador (APK) para probarla directamente en tu teléfono Android.
+            </p>
+
+            <!-- Botón de Descarga del APK -->
+            <a href="himnario-coros.apk" download class="btn-descargar">
+                <i class="fa-solid fa-download"></i> Descargar APK
+            </a>
         </div>
     </main>
 
