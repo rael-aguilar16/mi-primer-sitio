@@ -11,16 +11,26 @@
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
     <header class="navbar">
-        <div class="logo">MiPortafolio</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="logo">Mi Portafolio</a>
+     <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Interruptor deslizante de Modo Oscuro -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox-tema">
+            <input type="checkbox" id="checkbox-tema" />
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
     </header>
 
     <main class="contenedor-principal">
@@ -56,7 +66,7 @@
             <!-- Botones de Redes Sociales -->
             <div class="redes-sociales">
                 <!-- Enlace a Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=100081356799858&locale=es_LA" target="_blank" class="btn-red facebook">
+                <a href="https://www.facebook.com/israel.aguilarjimenez.18/" target="_blank" class="btn-red facebook">
                     <i class="fa-brands fa-facebook-f"></i> Facebook
                 </a>
 
@@ -68,6 +78,6 @@
 
         </div>
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>

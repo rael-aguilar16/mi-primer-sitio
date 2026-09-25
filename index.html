@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Tarjeta de Presentación</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Menú de Navegación -->
     <header class="navbar">
-        <div class="logo">Mi Portafolio</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <a href="index.html" class="logo">Mi Portafolio</a>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Interruptor deslizante de Modo Oscuro -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox-tema">
+            <input type="checkbox" id="checkbox-tema" />
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+</header>
 
     <!-- Contenido Principal -->
     <main class="contenedor-principal" id="inicio">
         <div class="tarjeta" id="tarjeta">
             <img src="yo.jpg" alt="Foto de Perfil" class="foto">
-            <h1>Rael Aguilar</h1>
-            <p class="profesion">Aspirante a Desarrollador Web</p>
-            <p class="bio">Aprendiendo a dominar HTML, CSS y JS para dar el salto al desarrollo dinámico con PHP y bases de datos.</p>
+            <h1>Israel Aguilar</h1>
+            <p class="profesion">Ing. Tecnologías de la Información</p>
+            <p class="bio">Creación de sitios web, desarrollo de Apps, diseño gráfico, licencias permanentes y todo tipo de software.</p>
             
-            <button id="btn-tema">Cambiar a Modo Oscuro</button>
         </div>
     </main>
 

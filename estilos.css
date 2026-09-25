@@ -1,10 +1,15 @@
-/* --- ESTILOS DEL MENÚ DE NAVEGACIÓN --- */
+/* ==========================================
+   1. CONFIGURACIÓN Y MENÚ DE NAVEGACIÓN
+   ========================================== */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding-top: 70px; /* Espacio para que el menú fijo no tape la tarjeta */
-    transition: background-color 0.3s ease;
+    padding-top: 80px; /* Espacio para la navbar fija */
+    min-height: 100vh;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar {
@@ -20,13 +25,19 @@ body {
     padding: 0 30px;
     box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Asegura que el menú quede por encima de todo */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.logo:hover {
+    color: #0056b3;
 }
 
 .nav-links {
@@ -34,55 +45,35 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Espacio entre cada opción del menú */
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.3rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #007bff; /* Color al pasar el cursor */
+    color: #007bff;
 }
 
 /* Centrado del contenido principal */
 .contenedor-principal {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 70px);
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
-/* --- ESTILOS PARA MODO OSCURO EN EL MENÚ --- */
-body.oscuro .navbar {
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-}
+/* ==========================================
+   2. ESTILOS DE TARJETAS Y ELEMENTOS BASE
+   ========================================== */
 
-body.oscuro .nav-links a {
-    color: #ffffff;
-}
-
-body.oscuro .nav-links a:hover {
-    color: #007bff;
-}
-
-/* Configuración básica de la página */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.3s ease;
-}
-
-/* Estilo del contenedor principal */
 .tarjeta {
     background-color: #ffffff;
     padding: 30px;
@@ -93,16 +84,14 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Foto redonda */
 .foto {
-    width: 150px;            /* Define el ancho deseado */
-    height: 150px;           /* Define la altura deseada */
-    object-fit: cover;       /* Ajusta la imagen sin recortar ni deformar sus proporciones */
-    border-radius: 50%;      /* La hace completamente redonda */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
-/* Tipografías */
 h1 {
     margin: 10px 0 5px 0;
     color: #1a1a1a;
@@ -120,7 +109,6 @@ h1 {
     line-height: 1.5;
 }
 
-/* Botón interactivo */
 button {
     background-color: #007bff;
     color: white;
@@ -137,38 +125,24 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos adicionales que aplicará JavaScript para el Modo Oscuro */
-body.oscuro {
-    background-color: #121212;
-}
-
-.tarjeta.modo-oscuro {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
-}
-
-.tarjeta.modo-oscuro h1,
-.tarjeta.modo-oscuro .bio {
-    color: #ffffff;
-}
-
-/* --- ESTILOS DEL FORMULARIO DE CONTACTO --- */
+/* ==========================================
+   3. FORMULARIO DE CONTACTO Y REDES SOCIALES
+   ========================================== */
 
 .tarjeta-formulario {
-    max-width: 450px; /* Un poco más ancho para que quepa bien el formulario */
-    text-align: left; /* Alineamos las etiquetas del formulario a la izquierda */
+    max-width: 450px;
+    text-align: left;
 }
 
 .tarjeta-formulario h1, 
 .tarjeta-formulario .bio {
-    text-align: center; /* Mantenemos título y descripción centrados */
+    text-align: center;
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Separación entre cada campo */
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -193,10 +167,9 @@ body.oscuro {
     font-family: inherit;
     font-size: 14px;
     box-sizing: border-box;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s;
 }
 
-/* Efecto al hacer clic en un campo de texto */
 .campo input:focus, 
 .campo textarea:focus {
     outline: none;
@@ -221,20 +194,6 @@ body.oscuro {
     background-color: #0056b3;
 }
 
-/* Ajustes adicionales si se activa el Modo Oscuro */
-body.oscuro .campo label {
-    color: #ddd;
-}
-
-body.oscuro .campo input, 
-body.oscuro .campo textarea {
-    background-color: #2b2b2b;
-    border-color: #444;
-    color: #fff;
-}
-
-/* --- ESTILOS DE BOTONES SOCIALES --- */
-
 .separador {
     text-align: center;
     margin: 25px 0 15px 0;
@@ -247,11 +206,7 @@ body.oscuro .campo textarea {
     padding: 0 10px;
     color: #888;
     font-size: 13px;
-}
-
-body.oscuro .separador span {
-    background: #1e1e1e;
-    color: #aaa;
+    transition: background 0.3s;
 }
 
 .redes-sociales {
@@ -276,19 +231,16 @@ body.oscuro .separador span {
 }
 
 .btn-red:hover {
-    transform: translateY(-2px); /* Eleva un poco el botón al pasar el cursor */
+    transform: translateY(-2px);
     opacity: 0.9;
 }
 
-/* Colores oficiales de las marcas */
-.facebook {
-    background-color: #1877f2;
-}
+.facebook { background-color: #1877f2; }
+.whatsapp { background-color: #25d366; }
 
-.whatsapp {
-    background-color: #25d366;
-}
-/* --- ESTILOS DE LA TARJETA DE PROYECTO Y DESCARGA APK --- */
+/* ==========================================
+   4. SECCIÓN PROYECTOS Y GALERÍA
+   ========================================== */
 
 .tarjeta-proyecto {
     max-width: 420px;
@@ -296,7 +248,7 @@ body.oscuro .separador span {
 
 .icono-app {
     font-size: 50px;
-    color: #3ddc84; /* Verde oficial de Android */
+    color: #3ddc84;
     margin-bottom: 10px;
 }
 
@@ -306,7 +258,7 @@ body.oscuro .separador span {
     justify-content: center;
     gap: 10px;
     background-color: #3ddc84;
-    color: #000000; /* Texto oscuro para contraste */
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
     padding: 12px 24px;
@@ -319,4 +271,212 @@ body.oscuro .separador span {
 .btn-descargar:hover {
     transform: translateY(-2px);
     background-color: #32be70;
+}
+
+.tarjeta-ancha {
+    max-width: 900px;
+    width: 90%;
+}
+
+.galeria-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.galeria-app img {
+    width: 160px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.galeria-app img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-contenido {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.cerrar:hover {
+    color: #3ddc84;
+}
+
+/* ==========================================
+   5. INTERRUPTOR DESLIZANTE (TOGGLE SWITCH)
+   ========================================== */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 55px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 22px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 22px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.icon-sun {
+    color: #f39c12;
+    font-size: 13px;
+}
+
+.icon-moon {
+    color: #f1c40f;
+    font-size: 13px;
+}
+
+input:checked + .slider {
+    background-color: #374151;
+}
+
+input:checked + .slider:before {
+    transform: translateX(27px);
+}
+
+/* ==========================================
+   6. ESTILOS COMPLETOS DE MODO OSCURO
+   ========================================== */
+
+body.oscuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.oscuro .navbar {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.oscuro .nav-links a {
+    color: #ffffff;
+}
+
+body.oscuro .logo {
+    color: #60a5fa;
+}
+
+/* Tarjetas en Modo Oscuro */
+body.oscuro .tarjeta,
+body.oscuro .tarjeta-proyecto,
+body.oscuro .tarjeta-formulario {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+body.oscuro h1, 
+body.oscuro h2, 
+body.oscuro h3 {
+    color: #ffffff;
+}
+
+body.oscuro .bio,
+body.oscuro p {
+    color: #aaaaaa;
+}
+
+/* Formulario en Modo Oscuro (Corrección de clases) */
+body.oscuro .campo label {
+    color: #dddddd;
+}
+
+body.oscuro .campo input, 
+body.oscuro .campo textarea {
+    background-color: #2b2b2b;
+    border-color: #444444;
+    color: #ffffff;
+}
+
+body.oscuro .campo input::placeholder,
+body.oscuro .campo textarea::placeholder {
+    color: #888888;
+}
+
+body.oscuro .separador span {
+    background: #1e1e1e;
+    color: #aaaaaa;
+}
+
+body.oscuro .separador {
+    border-bottom: 1px solid #333333;
 }
