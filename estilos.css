@@ -499,7 +499,7 @@ body.oscuro .separador {
     }
 
     .nav-links a {
-        font-size: 0.9rem; /* Un tamaño de letra cómodo pero compacto */
+        font-size: 1rem; /* Un tamaño de letra cómodo pero compacto */
     }
 
     /* Ajustamos el tamaño del Switch en pantallas pequeñas */
