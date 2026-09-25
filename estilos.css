@@ -480,3 +480,47 @@ body.oscuro .separador span {
 body.oscuro .separador {
     border-bottom: 1px solid #333333;
 }
+/* ==========================================
+   7. ADAPTACIÓN PARA MÓVILES (RESPONSIVE)
+   ========================================== */
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 12px; /* Reducimos los márgenes laterales de la barra */
+        height: 65px;    /* Le damos un poco más de altura para que respire */
+    }
+
+    .logo {
+        font-size: 1.1rem; /* Reducimos ligeramente el logo en celulares */
+    }
+
+    .nav-links {
+        gap: 10px; /* Reducimos el espacio entre Inicio, Proyectos y Contacto */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Un tamaño de letra cómodo pero compacto */
+    }
+
+    /* Ajustamos el tamaño del Switch en pantallas pequeñas */
+    .theme-switch {
+        width: 45px;
+        height: 24px;
+    }
+
+    .slider.round:before {
+        height: 18px;
+        width: 18px;
+        bottom: 3px;
+        left: 3px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(21px); /* Ajuste del desplazamiento para el tamaño pequeño */
+    }
+
+    .icon-sun, 
+    .icon-moon {
+        font-size: 10px; /* Íconos un poco más pequeños */
+    }
+}
