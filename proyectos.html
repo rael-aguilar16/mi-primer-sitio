@@ -5,43 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Proyectos</title>
     <link rel="stylesheet" href="estilos.css">
-    
-    <!-- Librería de íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
     <header class="navbar">
-        <div class="logo">MiPortafolio</div>
+    <a href="index.html" class="logo">Mi Portafolio</a>
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Interruptor deslizante de Modo Oscuro -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox-tema">
+            <input type="checkbox" id="checkbox-tema" />
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+</header>
 
     <main class="contenedor-principal">
-        <div class="tarjeta tarjeta-proyecto">
+        <!-- Agregamos la clase tarjeta-ancha para ampliar la vista -->
+        <div class="tarjeta tarjeta-proyecto tarjeta-ancha">
             <div class="icono-app">
                 <i class="fa-brands fa-android"></i>
             </div>
             
             <h1>Mi Aplicación de Android</h1>
-            <p class="profesion">Desarrollada en Android Studio</p>
+            <p class="profesion">Himnario de Coros</p>
 
             <p class="bio">
-                Esta es mi aplicación móvil creada en Android Studio. Puedes descargar el instalador (APK) para probarla directamente en tu teléfono Android.
+                Haz clic en cualquier captura de pantalla para verla en tamaño completo.
             </p>
 
-            <!-- Botón de Descarga del APK -->
+            <!-- Galería de capturas con función de clic -->
+            <div class="galeria-app">
+                <img src="captura1.jpg" alt="Captura 1" onclick="abrirModal(this.src)">
+                <img src="captura2.jpg" alt="Captura 2" onclick="abrirModal(this.src)">
+                <img src="captura3.jpg" alt="Captura 3" onclick="abrirModal(this.src)">
+                <img src="captura4.jpg" alt="Captura 4" onclick="abrirModal(this.src)">
+                <!-- Puedes agregar más imágenes cambiando la ruta -->
+            </div>
+
             <a href="himnario-coros.apk" download class="btn-descargar">
                 <i class="fa-solid fa-download"></i> Descargar APK
             </a>
         </div>
     </main>
 
+    <!-- Modal para ver la imagen ampliada -->
+    <div id="modal-imagen" class="modal" onclick="cerrarModal()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="img-ampliada">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
