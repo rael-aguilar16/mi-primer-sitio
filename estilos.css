@@ -357,6 +357,46 @@ button:hover {
 .cerrar:hover {
     color: #3ddc84;
 }
+/* Botones de navegación del visor (Carrusel) */
+.btn-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    font-size: 1.8rem;
+    padding: 15px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 2100;
+}
+
+.btn-carrusel:hover {
+    background-color: rgba(61, 220, 132, 0.8); /* Fondo verde estilo Android al hacer hover */
+    color: #000000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-carrusel.ant {
+    left: 20px;
+}
+
+.btn-carrusel.sig {
+    right: 20px;
+}
+
+/* Ajustes para pantallas pequeñas en móviles */
+@media (max-width: 600px) {
+    .btn-carrusel {
+        font-size: 1.2rem;
+        padding: 10px 13px;
+    }
+    
+    .btn-carrusel.ant { left: 10px; }
+    .btn-carrusel.sig { right: 10px; }
+}
 
 /* ==========================================
    5. INTERRUPTOR DESLIZANTE (TOGGLE SWITCH)
@@ -445,9 +485,15 @@ body.oscuro .navbar {
 body.oscuro .nav-links a {
     color: #ffffff;
 }
+body.oscuro .nav-links a:hover {
+    color: #60a5fa;
+}
 
 body.oscuro .logo {
     color: #60a5fa;
+}
+body.oscuro .logo:hover {
+    color: #93c5fd;
 }
 
 /* Tarjetas en Modo Oscuro */
@@ -544,4 +590,119 @@ body.oscuro .separador {
     .btn-red {
         flex: 1 1 40%; /* Cada botón ocupará aproximadamente la mitad del ancho */
     }
+}
+/* ==========================================
+   8. MODAL DE AVISO PARA EL FORMULARIO
+   ========================================== */
+
+.modal-aviso-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-aviso-contenido {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 85%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.2s ease-in-out;
+}
+
+.icono-aviso {
+    font-size: 2.5rem;
+    color: #f39c12; /* Color amarillo de advertencia */
+    margin-bottom: 15px;
+}
+
+.modal-aviso-contenido h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.modal-aviso-contenido p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.modal-aviso-contenido button {
+    margin-top: 0;
+    width: 100%;
+}
+
+/* Modificaciones para Modo Oscuro */
+body.oscuro .modal-aviso-contenido {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.oscuro .modal-aviso-contenido p {
+    color: #aaaaaa;
+}
+
+/* Animaciones suaves de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+/* --- ESTILOS PARA LA DESCRIPCIÓN DE PROYECTOS --- */
+
+.detalles-app {
+    text-align: left;
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.detalles-app h3, 
+.info-tecnica h3 {
+    font-size: 1.1rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+body.oscuro .detalles-app h3,
+body.oscuro .info-tecnica h3 {
+    color: #60a5fa;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-caracteristicas li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-caracteristicas li i {
+    color: #3ddc84; /* Verde Android para los íconos de check */
+}
+
+body.oscuro .lista-caracteristicas li {
+    color: #cccccc;
 }

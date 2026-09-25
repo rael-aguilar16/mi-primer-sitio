@@ -38,12 +38,24 @@
                 <i class="fa-brands fa-android"></i>
             </div>
             
-            <h1>Mi Aplicación de Android</h1>
-            <p class="profesion">Himnario de Coros</p>
+            <h1>Himnario de Coros</h1>
+            <p class="profesion">Aplicación para Android</p>
 
             <p class="bio">
-                Haz clic en cualquier captura de pantalla para verla en tamaño completo.
+                Una aplicación diseñada para facilitar la búsqueda y lectura de alabanzas y coros. No busca reemplazar el formato físico, sino ofrecer una alternativa digital para quienes prefieren acceder de manera rápida y sencilla a su repertorio musical. Esperando que sea de gran utilidad para exaltar el nombre del Señor en todo lugar y momento.
             </p>
+            <div class="detalles-app">
+                <h3>Características principales:</h3>
+                    <ul class="lista-caracteristicas">
+                        <li><i class="fa-solid fa-check"></i> Búsqueda rápida por título sin restricciones ortográficas.</li>
+                        <li><i class="fa-solid fa-check"></i> Modo oscuro para reducir el cansancio visual.</li>
+                        <li><i class="fa-solid fa-check"></i> Sección de favoritos para acceder rápidamente a los coros preferidos.</li>
+                        <li><i class="fa-solid fa-check"></i> Filtrado de coros por categoría.</li>
+                        <li><i class="fa-solid fa-check"></i> Sección de errores y sugerencias.</li>
+                        <li><i class="fa-solid fa-check"></i> Permite ajustar el tamaño de texto para una mejor legibilidad.</li>
+                        <li><i class="fa-solid fa-check"></i> Funciona al 100% sin conexión a Internet.</li>
+                    </ul>
+            </div>
 
             <!-- Galería de capturas con función de clic -->
             <div class="galeria-app">
@@ -51,6 +63,7 @@
                 <img src="captura2.jpg" alt="Captura 2" onclick="abrirModal(this.src)">
                 <img src="captura3.jpg" alt="Captura 3" onclick="abrirModal(this.src)">
                 <img src="captura4.jpg" alt="Captura 4" onclick="abrirModal(this.src)">
+                <img src="captura5.jpg" alt="Captura 5" onclick="abrirModal(this.src)">
                 <!-- Puedes agregar más imágenes cambiando la ruta -->
             </div>
 
@@ -60,11 +73,23 @@
         </div>
     </main>
 
-    <!-- Modal para ver la imagen ampliada -->
-    <div id="modal-imagen" class="modal" onclick="cerrarModal()">
-        <span class="cerrar">&times;</span>
-        <img class="modal-contenido" id="img-ampliada">
-    </div>
+    <!-- Modal / Visor de Capturas -->
+<div id="modal-visor" class="modal">
+    <span class="cerrar" id="btn-cerrar">&times;</span>
+    
+    <!-- Botón Anterior -->
+    <button class="btn-carrusel ant" id="btn-ant" aria-label="Imagen anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Imagen ampliada -->
+    <img class="modal-contenido" id="img-ampliada" alt="Captura ampliada">
+
+    <!-- Botón Siguiente -->
+    <button class="btn-carrusel sig" id="btn-sig" aria-label="Imagen siguiente">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
 
     <script src="script.js"></script>
 </body>
