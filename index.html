@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tarjeta de Presentación</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header class="navbar">
+    <a href="index.html" class="logo">Mi Portafolio</a>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Interruptor deslizante de Modo Oscuro -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox-tema">
+            <input type="checkbox" id="checkbox-tema" />
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+</header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor-principal">
+    <div class="malla-servicios">
+        
+        <!-- Tarjeta de Presentación Principal (Fija) -->
+        <div class="tarjeta">
+            <img src="yo.jpg" alt="Foto de perfil" class="foto">
+            <h1>Israel Aguilar</h1>
+            <p class="profesion">Ing. Tecnologías de la Información</p>
+            <p class="bio">
+                Creación de sitios web, desarrollo de Apps, diseño gráfico, licencias permanentes y todo tipo de software.
+            </p>
+        </div>
+
+        <!-- TARJETA CON FLIP 1: Diseño Gráfico -->
+        <div class="tarjeta-flip">
+            <div class="tarjeta-flip-inner">
+                <!-- Cara Frontal -->
+                <div class="tarjeta-flip-frente">
+                    <i class="fa-solid fa-palette icono-servicio"></i>
+                    <h2>Diseño Gráfico</h2>
+                    <div class="insignias-programas">
+                        <span class="insignia ps">Ps</span>
+                        <span class="insignia ai">Ai</span>
+                        <span class="insignia id">Id</span>
+                    </div>
+                    <p class="subtexto-flip">Más información...</p>
+                </div>
+                <!-- Cara Trasera -->
+                <div class="tarjeta-flip-atras">
+                    <h3>Diseño Gráfico</h3>
+                    <ul class="lista-servicios">
+                        <li><i class="fa-solid fa-check"></i> Logos e identidad visual</li>
+                        <li><i class="fa-solid fa-check"></i> Banners y publicidad digital</li>
+                        <li><i class="fa-solid fa-check"></i> Invitaciones digitales de todo tipo</li>
+                        <li><i class="fa-solid fa-check"></i> Rediseño de marca</li>
+                        <li><i class="fa-solid fa-check"></i> Herramientas profesionales de diseño como Photoshop, Illustrator, etc.</li>
+                    </ul>
+                    <a href="contacto.html" class="btn-servicio">Cotizar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TARJETA CON FLIP 2: Software y Licencias -->
+        <div class="tarjeta-flip">
+            <div class="tarjeta-flip-inner">
+                <!-- Cara Frontal -->
+                <div class="tarjeta-flip-frente">
+                    <i class="fa-solid fa-key icono-servicio"></i>
+                    <h2>Licencias & Software</h2>
+                    <div class="insignias-programas">
+                <span class="insignia win"><i class="fa-brands fa-windows"></i> Windows</span>
+                <span class="insignia office">Office</span>
+            </div>
+                    <p class="subtexto-flip">Más información...</p>
+                </div>
+                <!-- Cara Trasera -->
+                <div class="tarjeta-flip-atras">
+                    <h3>Activación & Software</h3>
+                    <ul class="lista-servicios">
+                        <li><i class="fa-solid fa-check"></i> Licencias de Windows & Office de manera permanente</li>
+                        <li><i class="fa-solid fa-check"></i> Mantenimiento y optimización de equipos</li>
+                        <li><i class="fa-solid fa-check"></i> Instalación remota</li>
+                    </ul>
+                    <a href="contacto.html" class="btn-servicio">Consultar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>

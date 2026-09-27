@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+    <a href="index.html" class="logo">Mi Portafolio</a>
+        <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Interruptor deslizante de Modo Oscuro -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox-tema">
+            <input type="checkbox" id="checkbox-tema" />
+            <div class="slider round">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <i class="fa-solid fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+</header>
+
+    <main class="contenedor-principal">
+        <!-- Agregamos la clase tarjeta-ancha para ampliar la vista -->
+        <div class="tarjeta tarjeta-proyecto tarjeta-ancha">
+            <div class="icono-app">
+                <i class="fa-brands fa-android"></i>
+            </div>
+            
+            <h1>Himnario de Coros</h1>
+            <p class="profesion">Aplicación para Android</p>
+
+            <p class="bio">
+                Una aplicación diseñada para facilitar la búsqueda y lectura de alabanzas y coros. No busca reemplazar el formato físico, sino ofrecer una alternativa digital para quienes prefieren acceder de manera rápida y sencilla a su repertorio musical. Esperando que sea de gran utilidad para exaltar el nombre del Señor en todo lugar y momento.
+            </p>
+            <div class="detalles-app">
+                <h3>Características principales:</h3>
+                    <ul class="lista-caracteristicas">
+                        <li><i class="fa-solid fa-check"></i> Búsqueda rápida por título sin restricciones ortográficas.</li>
+                        <li><i class="fa-solid fa-check"></i> Modo oscuro para reducir el cansancio visual.</li>
+                        <li><i class="fa-solid fa-check"></i> Sección de favoritos para acceder rápidamente a los coros preferidos.</li>
+                        <li><i class="fa-solid fa-check"></i> Filtrado de coros por categoría.</li>
+                        <li><i class="fa-solid fa-check"></i> Sección de errores y sugerencias.</li>
+                        <li><i class="fa-solid fa-check"></i> Permite ajustar el tamaño de texto para una mejor legibilidad.</li>
+                        <li><i class="fa-solid fa-check"></i> Funciona al 100% sin conexión a Internet.</li>
+                    </ul>
+            </div>
+
+            <!-- Galería de capturas con función de clic -->
+            <div class="galeria-app">
+                <img src="captura1.jpg" alt="Captura 1" onclick="abrirModal(this.src)">
+                <img src="captura5.jpg" alt="Captura 2" onclick="abrirModal(this.src)">
+                <img src="captura3.jpg" alt="Captura 3" onclick="abrirModal(this.src)">
+                <img src="captura4.jpg" alt="Captura 4" onclick="abrirModal(this.src)">
+                <img src="captura2.jpg" alt="Captura 5" onclick="abrirModal(this.src)">
+                <!-- Puedes agregar más imágenes cambiando la ruta -->
+            </div>
+
+            <a href="himnario-coros.apk" download class="btn-descargar">
+                <i class="fa-solid fa-download"></i> Descargar APK
+            </a>
+        </div>
+    </main>
+
+    <!-- Modal / Visor de Capturas -->
+<div id="modal-visor" class="modal">
+    <span class="cerrar" id="btn-cerrar">&times;</span>
+    
+    <!-- Botón Anterior -->
+    <button class="btn-carrusel ant" id="btn-ant" aria-label="Imagen anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Imagen ampliada -->
+    <img class="modal-contenido" id="img-ampliada" alt="Captura ampliada">
+
+    <!-- Botón Siguiente -->
+    <button class="btn-carrusel sig" id="btn-sig" aria-label="Imagen siguiente">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
