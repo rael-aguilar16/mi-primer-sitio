@@ -1,6 +1,6 @@
 {
-  "versionCode": 4,
-  "versionName": "1.5.0",
+  "versionCode": 5,
+  "versionName": "1.5.8",
   "apkUrl": "https://raw.githubusercontent.com/rael-aguilar16/mi-primer-sitio/refs/heads/main/himnario-coros.apk",
-  "novedades": "- Correcciones y mejoras visuales.\n- Se agregaron nuevas canciones al himnario.\n- Mejoras en la navegación de la aplicación."
+  "novedades": "- Correcciones y mejoras visuales.\n- Se agregaron nuevas canciones al himnario.\n- Mejoras en la navegación de la aplicación.\n- Optimización del rendimiento y estabilidad.\n- Actualización de la interfaz de usuario para una experiencia más intuitiva."
 }
