@@ -162,3 +162,15 @@ if (botonAPK) {
     alert('¡La descarga ha comenzado!\n\nNota: Recuerda eliminar el archivo .apk de la versión anterior de tu carpeta "Descargas" para liberar espacio en tu teléfono.');
   });
 }
+
+const imagenesProtegidas = document.querySelectorAll('.bloqueo-total');
+
+
+imagenesProtegidas.forEach(imagen => {
+ 
+  imagen.addEventListener('contextmenu', function(evento) {
+   
+    evento.preventDefault();
+   
+  });
+});

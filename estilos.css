@@ -918,3 +918,26 @@ body.oscuro .lista-servicios li {
     touch-action: manipulation; /* <--- Elimina el retardo táctil en celulares */
     cursor: pointer;
 }
+/* --- Estilos para el Logo Protegido --- */
+
+.contenedor-logo-protegido {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio debajo del logo */
+    -webkit-user-select: none;  /* Desactivar selección Chrome/Safari */
+    -moz-user-select: none;     /* Desactivar selección Firefox */
+    -ms-user-select: none;      /* Desactivar selección IE/Edge */
+    user-select: none;          /* Desactivar selección estándar */
+}
+
+.logo-iglesia {
+    width: 130px; /* Ajusta el tamaño que prefieras */
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -user-drag: none;
+    -webkit-touch-callout: none;
+}
