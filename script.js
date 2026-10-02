@@ -154,3 +154,11 @@ document.querySelectorAll('.tarjeta-flip').forEach(tarjeta => {
         }
     });
 });
+// Aviso de recordatorio al descargar el APK
+const botonAPK = document.querySelector('.btn-descargar');
+
+if (botonAPK) {
+  botonAPK.addEventListener('click', () => {
+    alert('¡La descarga ha comenzado!\n\nNota: Recuerda eliminar el archivo .apk de la versión anterior de tu carpeta "Descargas" para liberar espacio en tu teléfono.');
+  });
+}
